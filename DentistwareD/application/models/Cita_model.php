@@ -208,6 +208,7 @@ class Cita_model extends MY_Model {
 		$this->db->from('cita');
 		$this->db->where('fecha_cita', $fecha);
 		$this->db->where('hora_cita', $hora);
+        $this->db->where('estado_cita is NULL', NULL, FALSE);
 		if($id_cliente){
 			$this->db->where('id_cliente', $id_cliente);
 		}
